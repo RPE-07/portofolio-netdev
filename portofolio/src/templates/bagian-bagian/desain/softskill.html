@@ -1,0 +1,105 @@
+/* Background dan spacing section */
+#summary-section {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to bottom, #D4F6FF 70%, #FBFBFB);
+  padding: 60px 40px;
+  width: 100%;
+  box-sizing: 
+  border-box;
+  scroll-margin-top: 100px;
+}
+
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;   
+  max-width: 100%;
+  margin: 0;
+}
+
+.summary-box {
+  background-color: #FBFBFB;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.summary-box .section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+
+.soft-skill-list,
+.experience-list,
+.education-list {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.soft-skill-list li,
+.experience-list li,
+.education-list li {
+  margin-bottom: 10px;
+}
+
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-card {
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none; /* Hilangkan underline */
+  color: inherit; /* Ikuti warna teks biasa */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.edu-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #222;
+}
+
+.edu-img {
+  width: 150px;
+  height: 100px;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+
+.edu-year {
+  font-size: 14px;
+  color: #444;
+}
+

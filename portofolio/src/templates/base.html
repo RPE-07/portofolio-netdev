@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raihan Putra Ediananta</title>
+    {% include 'snippets/css.html' %}
+
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        {% include 'bagian-bagian/desain/HOME.html' %}
+        {% include 'bagian-bagian/desain/about.html' %}
+        {% include 'bagian-bagian/desain/keahlian.html' %}
+        {% include 'bagian-bagian/desain/softskill.html' %}
+        {% include 'bagian-bagian/desain/proyek.html' %}
+        {% include 'bagian-bagian/desain/navbar.html' %}
+    </style>
+
+</head>
+<body>
+
+    
+{% block content %}
+{% endblock content %}
+
+
+{% include 'snippets/lowerbar.html' %}
+{% include 'snippets/js.html' %}
+
+</body>
+</html>

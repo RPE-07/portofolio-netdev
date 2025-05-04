@@ -1,0 +1,91 @@
+/* Section: Skills */
+#skills {
+  min-height: 100vh;
+  padding: 100px 20px 60px; /* ← Tambah padding-top supaya tidak tertutup navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #C6E7FF 0%, #D4F6FF 100%);
+  box-sizing: border-box;
+}
+
+/* Section: Hobby */
+#hobby {
+  padding: 60px 20px 60px;
+  background: linear-gradient(to bottom, #D4F6FF, #EFFFFF);
+  box-sizing: border-box;
+}
+
+/* Section title umum */
+.section-title,
+.section-title1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Jarak atas tambahan untuk hobby */
+.section-title1 {
+  margin-top: 0;
+}
+
+/* Container grid untuk skill/hobby */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kartu skill/hobi */
+.skill-card {
+  background-color: #D4F6FF;
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Ikon dalam kartu */
+.skill-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand navbar-dark bg-custom fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home">Portofolio</a>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Saya</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#summary-section">Kemampuan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyek">Projek Saya</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">kontak</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<script>
+    const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop === 0) {
+            // Saat di paling atas, sembunyikan navbar
+            navbar.style.top = "-80px";
+        } else if (scrollTop > lastScrollTop) {
+            
+            navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.pageYOffset === 0) {
+            navbar.style.top = "-80px";
+        }
+    });
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+        });
+        bsCollapse.hide();
+
+        navbar.style.top = "-80px";
+    });
+});
+</script>
+
+
